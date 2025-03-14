@@ -1,0 +1,25 @@
+// Guia_1603.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+			JMP MAIN
+F_MOD: 		POP H
+			POP B
+			MOV A, C
+			MOV D, B
+			
+MOD_LOOP: 	CMP D
+			JC END_MOD
+			SUB D
+			JMP MOD_LOOP
+			
+END_MOD: 	PUSH H
+			RET
+
+MAIN: 		LXI H, 0050
+			MOV C, M
+			INX H
+			MOV D, M
+			PUSH B
+			CALL F_MOD
+			STA 0052
+			HLT

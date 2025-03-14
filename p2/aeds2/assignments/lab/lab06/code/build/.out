@@ -1,0 +1,56 @@
+----- Médias de Execução -----
+Primeiro Pivô:
+Tamanho 10000:
+ - Arrays Ordenados: 49.048 ms
+ - Arrays Quase Ordenados: 0.899 ms
+ - Arrays Aleatórios: 0.995 ms
+Tamanho 100:
+ - Arrays Ordenados: 0.008 ms
+ - Arrays Quase Ordenados: 0.004 ms
+ - Arrays Aleatórios: 0.003 ms
+Tamanho 1000:
+ - Arrays Ordenados: 0.879 ms
+ - Arrays Quase Ordenados: 0.079 ms
+ - Arrays Aleatórios: 0.123 ms
+
+Último Pivô:
+Tamanho 10000:
+ - Arrays Ordenados: 52.452 ms
+ - Arrays Quase Ordenados: 0.542 ms
+ - Arrays Aleatórios: 0.850 ms
+Tamanho 100:
+ - Arrays Ordenados: 0.006 ms
+ - Arrays Quase Ordenados: 0.003 ms
+ - Arrays Aleatórios: 0.006 ms
+Tamanho 1000:
+ - Arrays Ordenados: 0.480 ms
+ - Arrays Quase Ordenados: 0.039 ms
+ - Arrays Aleatórios: 0.059 ms
+
+Mediana de Três Pivôs:
+Tamanho 10000:
+ - Arrays Ordenados: 0.465 ms
+ - Arrays Quase Ordenados: 0.589 ms
+ - Arrays Aleatórios: 1.225 ms
+Tamanho 100:
+ - Arrays Ordenados: 0.002 ms
+ - Arrays Quase Ordenados: 0.002 ms
+ - Arrays Aleatórios: 0.003 ms
+Tamanho 1000:
+ - Arrays Ordenados: 0.014 ms
+ - Arrays Quase Ordenados: 0.030 ms
+ - Arrays Aleatórios: 0.066 ms
+
+Pivô Aleatório:
+Tamanho 10000:
+ - Arrays Ordenados: 0.757 ms
+ - Arrays Quase Ordenados: 0.707 ms
+ - Arrays Aleatórios: 1.270 ms
+Tamanho 100:
+ - Arrays Ordenados: 0.004 ms
+ - Arrays Quase Ordenados: 0.004 ms
+ - Arrays Aleatórios: 0.005 ms
+Tamanho 1000:
+ - Arrays Ordenados: 0.059 ms
+ - Arrays Quase Ordenados: 0.065 ms
+ - Arrays Aleatórios: 0.108 ms

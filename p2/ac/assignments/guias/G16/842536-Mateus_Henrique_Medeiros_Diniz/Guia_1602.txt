@@ -1,0 +1,27 @@
+// Guia_1602.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+			JMP MAIN
+F_DIV: 		POP H
+			POP B
+			MOV A, C
+			MOV D, B
+			MVI C, 00
+			
+DIV_LOOP:	CMP D
+			JC END_DIV
+			SUB D
+			INR C
+			JMP DIV_LOOP
+			
+END_DIV: 	PUSH H
+			RET
+
+MAIN: 		LXI H, 0050
+			MOV C, M
+			INX H
+			MOV D, M
+			PUSH B
+			CALL F_DIV
+			STA 0052
+			HLT

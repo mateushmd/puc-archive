@@ -1,0 +1,97 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\ICARUS~1\lib\ivl\system.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\va_math.vpi";
+S_0000029343db6160 .scope module, "R0103a" "R0103a" 2 6;
+ .timescale 0 0;
+v0000029343e03ad0_0 .var "a", 0 0;
+v0000029343e03b70_0 .var "b", 0 0;
+v0000029343e03c10_0 .var "c", 0 0;
+v0000029343e03cb0_0 .net "s", 0 0, L_0000029343db6700;  1 drivers
+S_0000029343db62f0 .scope module, "f" "F" 2 10, 2 38 0, S_0000029343db6160;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "c";
+L_0000029343dbbf60 .functor NOT 1, v0000029343e03ad0_0, C4<0>, C4<0>, C4<0>;
+L_0000029343dbd2d0 .functor OR 1, L_0000029343dbbf60, v0000029343e03b70_0, C4<0>, C4<0>;
+L_0000029343db69e0 .functor NOT 1, v0000029343e03c10_0, C4<0>, C4<0>, C4<0>;
+L_0000029343db6cc0 .functor OR 1, v0000029343e03b70_0, L_0000029343db69e0, C4<0>, C4<0>;
+L_0000029343db6700 .functor AND 1, L_0000029343dbd2d0, L_0000029343db6cc0, C4<1>, C4<1>;
+v0000029343db6b40_0 .net *"_ivl_0", 0 0, L_0000029343dbbf60;  1 drivers
+v0000029343db6480_0 .net *"_ivl_2", 0 0, L_0000029343dbd2d0;  1 drivers
+v0000029343db6520_0 .net *"_ivl_4", 0 0, L_0000029343db69e0;  1 drivers
+v0000029343dbbd80_0 .net *"_ivl_6", 0 0, L_0000029343db6cc0;  1 drivers
+v0000029343dbbe20_0 .net "a", 0 0, v0000029343e03ad0_0;  1 drivers
+v0000029343dbbec0_0 .net "b", 0 0, v0000029343e03b70_0;  1 drivers
+v0000029343e03760_0 .net "c", 0 0, v0000029343e03c10_0;  1 drivers
+v0000029343e03800_0 .net "s", 0 0, L_0000029343db6700;  alias, 1 drivers
+S_0000029343e038a0 .scope begin, "main" "main" 2 13, 2 13 0, S_0000029343db6160;
+ .timescale 0 0;
+v0000029343e03a30_0 .var/i "i", 31 0;
+    .scope S_0000029343db6160;
+T_0 ;
+    %fork t_1, S_0000029343e038a0;
+    %jmp t_0;
+    .scope S_0000029343e038a0;
+t_1 ;
+    %vpi_call 2 16 "$display", "a b c | s" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029343e03ad0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029343e03b70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029343e03c10_0, 0, 1;
+    %vpi_call 2 22 "$monitor", "%b %b %b | %b", v0000029343e03ad0_0, v0000029343e03b70_0, v0000029343e03c10_0, v0000029343e03cb0_0 {0 0 0};
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0000029343e03a30_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0000029343e03a30_0;
+    %cmpi/s 7, 0, 32;
+    %flag_or 5, 4;
+    %jmp/0xz T_0.1, 5;
+    %delay 1, 0;
+    %load/vec4 v0000029343e03c10_0;
+    %inv;
+    %store/vec4 v0000029343e03c10_0, 0, 1;
+    %load/vec4 v0000029343e03a30_0;
+    %pushi/vec4 2, 0, 32;
+    %mod/s;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.2, 4;
+    %load/vec4 v0000029343e03b70_0;
+    %inv;
+    %store/vec4 v0000029343e03b70_0, 0, 1;
+T_0.2 ;
+    %load/vec4 v0000029343e03a30_0;
+    %pushi/vec4 4, 0, 32;
+    %mod/s;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.4, 4;
+    %load/vec4 v0000029343e03ad0_0;
+    %inv;
+    %store/vec4 v0000029343e03ad0_0, 0, 1;
+T_0.4 ;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0000029343e03a30_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0000029343e03a30_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .scope S_0000029343db6160;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "R_0103a.v";

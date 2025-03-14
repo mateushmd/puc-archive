@@ -1,0 +1,115 @@
+Pontifícia Universidade Católica de Minas Gerais
+Instituto de Ciências Extadas e de Informática
+
+Leitura e assimilação dos conteúdos dos artigos sobre Dispositivos Lógicos Programáveis
+
+Mateus Henrique Medeiros Diniz - 880541
+
+Este trabalho aborda as características e compara os diversos dispositivos lógicos programáveis, com foco nos 
+tipos PROM, PLA, PAL, ASIC, ASSP, SPLD, CPLD, SoC e FGPA a partir da análise dos artigos. São discutidos os 
+aspectos estruturais, aplicações, vantagens e desvantagens dos dispositivos.
+
+ASIC (Application-Specific Integrated CIrcuit) é um circuito integrado projetado para realizar uma função em 
+uma aplicação específica. Devido à sua restrição, é otimizado em termos de eficiência e consumo de energia, 
+porém não permite flexibilidade. O ASIC é mais utilizado em produção em larga escala, como dispositivos móveis
+ e equipamentos de rede.
+
+ASSP (Application-Specific Standard Product) é um circuito integrado similar ao ASIC, que mantém o desempenho 
+enquanto aumenta a gama de aplicações, muito utilizado em telecomunicação, automação e controle industrial, 
+setores onde suas características podem ser aproveitadas.
+
+SPLD (Simple Programmable Logic Device) são dispositivos lógicos programáveis simples, como o Programmable Array 
+(PAL) Logic e o Generic Array Logic (GAL). Sua arquitetura com blocos lógicos o torna menos complexo de ser 
+programado, sendo assim aplicado em contextos onde a exigência de capacidade lógica é menor, como circuitos de 
+controle básico.
+
+CPLD (Complex Programmable Logic Device) é um dispositivo lógico programável similar aos SLPDs, porém fornece 
+estabilidade e retenção de dados graças ao uso de EEPROM. São ideais para automação industrial, controle de 
+processos e sistemas embarcados, onde a estabilidade é fundamental.
+
+SoC (System on Chip) é um circuito integrado que combina componentes de computadores, como CPI, GPU, memória e
+ periféricos. São compactos e eficientes, utilizados em contextos onde o espaço e a eficiência energética são 
+ críticos, como dispositivos móveis. É possível integrar múltiplos componentes em um único chip, o que diminui 
+ o custo de fabricação.
+
+FPGA (Field-Programmable Gate Array) é um dispositivo lógico programável que permite a configuração de blocos 
+de funções por meio de uma matriz de trilhas e chaves. É altamente flexível, utilizado para prototipagem e 
+desenvolvimento de hardware devido a sua capacidade de reprogramação. Porém, são baseados em memória RAM, 
+portanto perdem a programação ao serem desligados.
+
++-----------------+--------------------------+--------------------------------+--------------------------------+
+| Características |           PROM           |               PLA              |               PAL              |
++-----------------+--------------------------+--------------------------------+--------------------------------+
+| Definição       | Memória de somente       | Dispositivo de lógica          | Dispositivo de lógica          |
+|                 | leitura programável.     | programável com arranjos       | programável onde apenas        |
+|                 |                          | AND e OR.                      | o arranjo AND é programável,   |
+|                 |                          |                                | enquanto o OR é fixo.          |
++-----------------+--------------------------+--------------------------------+--------------------------------+
+| Estrutura       | Possui uma matriz AND    | Dispõe de duas matrizes        | Estrutura com arranjo AND      |
+|                 | fixa e uma matriz R      | programáveis (AND e OR),       | programável, e OR fixo para    |
+|                 | programável, usada para  | permitindo maior               | redução de custos.             |
+|                 | decodificação.           | versatilidade nas funções.     |                                |
++-----------------+--------------------------+--------------------------------+--------------------------------+
+| Flexibilidade   | Limitada: uma vez        | Alta: permite criar funções    | Moderada: mais simples e com   |
+|                 | programada, a            | lógicas complexas e é mais     | custo menor que PLA, ideal     |
+|                 | configuração não         | flexível, mas com maior custo. | para funções menos complexas.  |
+|                 | pode ser alterada.       |                                |                                |
++-----------------+--------------------------+--------------------------------+--------------------------------+
+| Aplicações      | Usada principalmente     | Ideal para a implementação     | Aplicada em circuitos onde é   |
+|                 | para armazenamento       | de lógicas personalizadas      | necessária lógica              |
+|                 | de dados permanentes,    | que requerem flexibilidade     | combinacional simples,         |
+|                 | como tabelas e códigos.  | nas operações AND-OR.          | com restrições de custo.       |
++-----------------+--------------------------+--------------------------------+--------------------------------+
+| Custo           | Baixo, devido à sua      | Relativamente alto, devido     | Intermediário: menos caro que  |
+|                 | simplicidade e uso       | à complexidade e               | PLA, pois é uma versão         |
+|                 | limitado em aplicações   | flexibilidade de suas          | simplificada com menor         |
+|                 | lógicas.                 | matrizes programáveis.         | flexibilidade.                 |
++-----------------+--------------------------+--------------------------------+--------------------------------+
+
++-----------------+-------------------------------------+-----------------------------------+
+| Características |                 CLPD                |                FGPA               |
++-----------------+-------------------------------------+-----------------------------------+
+| Definição       | Dispositivo lógico                  | Dispositivo de lógica             |
+|                 | programável com múltiplos           | programável com uma grande        |
+|                 | blocos lógicos                      | quantidade de unidades            |
+|                 | interconectados, permitindo         | lógicas configuráveis,            |
+|                 | implementações de lógica            | permitindo flexibilidade          |
+|                 | digital complexa.                   | máxima na interconexão.           |
++-----------------+-------------------------------------+-----------------------------------+
+| Estrutura       | Composto por macrocélulas           | Estrutura composta por            |
+|                 | que se conectam por                 | muitos blocos lógicos             |
+|                 | interconexões programáveis,         | menores, interconectados          |
+|                 | cada célula implementa lógica       | através de uma matriz de          |
+|                 | combinacional ou sequencial.        | trilhas e chaves                  |
+|                 |                                     | programáveis.                     |
++-----------------+-------------------------------------+-----------------------------------+
+| Flexibilidade   | Moderada: proporciona boas          | Alta: permite reprogramação       |
+|                 | opções de programação, mas as       | e reconfiguração constantes,      |
+|                 | interconexões podem não ser         | oferecendo flexibilidade na       |
+|                 | totalmente conectáveis.             | implementação de diversas         |
+|                 |                                     | funções lógicas.                  |
++-----------------+-------------------------------------+-----------------------------------+
+| Aplicação       |                                     | Usado em projetos de              |
+|                 | Comum em automação industrial,      | prototipagem, desenvolvimento     |
+|                 | controle de processos e aplicações  | de hardware, sistemas embarcados  |
+|                 | que exigem estabilidade e           | e aplicações que necessitam de    |
+|                 | confiabilidade.                     | lógica complexa e mudanças        |
+|                 |                                     | frequentes.                       |
++-----------------+-------------------------------------+-----------------------------------+
+| Custo           | Geralmente mais baixo que FPGAs,    | Custo pode ser mais alto, mas     |
+|                 | especialmente em aplicações que     | justificado pela flexibilidade    |
+|                 | não exigem alta complexidade.       | e capacidade de implementação     |
+|                 |                                     | de sistemas complexos.            |
++-----------------+-------------------------------------+-----------------------------------+
+	
+Referências:
+
+FREITAS, Tiago Tobias; PASQUALINOTO, Thiago Luiz; LEÃO, Juliano Carlos. O CPLD (Dispositivo Complexo de Lógica 
+Programação aplicado em automação industrial). 2005. 7 p. Monografia (Especialização) - Curso de Eletrônica, Senai, 
+São Paulo, 2005.
+
+CODÁ, Luiza Maria Romeiro. Dispositivos Lógicos Programáveis. 2014. 32 p. Departamento de Engenharia Elétrica e 
+de Computação, Universidade de São Paulo, São Paulo, 2014.
+
+MACEDO, Otavio Augusto Cardoso; ALVES, Priscila Bueno; MARRANGHELLO, Norian. Dispositivos lógicos programáveis. 
+São José do Rio Preto, 2002. 10 p.

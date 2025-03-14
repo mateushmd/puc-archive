@@ -1,0 +1,15 @@
+Main:	load false
+	NAND false
+	write
+	load false	
+	NAND true
+	write
+	load true
+	NAND false
+	write
+	load true
+	NAND true
+	write
+
+false: 	.data 2 0
+true:	.data 2 0xFFFF

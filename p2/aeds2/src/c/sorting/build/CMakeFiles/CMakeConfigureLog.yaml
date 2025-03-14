@@ -1,0 +1,184 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: c:/msys64/mingw64/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/3.30.0-rc3/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-7rfgt8"
+      binary: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-7rfgt8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-7rfgt8'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile cmTC_34424/fast
+        no such file or directory
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Check for working C compiler: c:/msys64/mingw64/bin/gcc.exe"
+    directories:
+      source: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-qth6u9"
+      binary: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-qth6u9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-qth6u9'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile cmTC_5c407/fast
+        no such file or directory
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: c:/msys64/mingw64/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/3.30.0-rc3/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-qhhrjn"
+      binary: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-qhhrjn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-qhhrjn'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile cmTC_280aa/fast
+        
+        Microsoft (R) Program Maintenance Utility VersÒo 14.41.34123.0
+        Direitos autorais da Microsoft Corporation. Todos os direitos reservados.
+        	"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_280aa.dir\\build.make CMakeFiles/cmTC_280aa.dir/build
+        
+        Microsoft (R) Program Maintenance Utility VersÒo 14.41.34123.0
+        Direitos autorais da Microsoft Corporation. Todos os direitos reservados.
+        NMAKE : fatal error U1073: nÒo sabe como criar 'C:/Program\\'
+        Stop.
+        NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_280aa.dir\\build.make CMakeFiles/cmTC_280aa.dir/build' : c¾digo de retorno '0x2'
+        Stop.
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Check for working C compiler: c:/msys64/mingw64/bin/gcc.exe"
+    directories:
+      source: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-mwdl9x"
+      binary: "C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-mwdl9x"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/CMakeScratch/TryCompile-mwdl9x'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 nmake -f Makefile cmTC_b75d8/fast
+        
+        Microsoft (R) Program Maintenance Utility VersÒo 14.41.34123.0
+        Direitos autorais da Microsoft Corporation. Todos os direitos reservados.
+        	"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x86\\nmake.exe"  -f CMakeFiles\\cmTC_b75d8.dir\\build.make CMakeFiles/cmTC_b75d8.dir/build
+        
+        Microsoft (R) Program Maintenance Utility VersÒo 14.41.34123.0
+        Direitos autorais da Microsoft Corporation. Todos os direitos reservados.
+        Building C object CMakeFiles/cmTC_b75d8.dir/testCCompiler.c.obj
+        	c:\\msys64\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_b75d8.dir\\testCCompiler.c.obj -c C:\\temp\\estudos\\puc\\p2\\aeds2\\src\\c\\sorting\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mwdl9x\\testCCompiler.c
+        Linking C executable cmTC_b75d8.exe
+        	"C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b75d8.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b75d8.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b75d8.dir/objects.a @CMakeFiles\\cmTC_b75d8.dir\\objects1.rsp
+        c:\\msys64\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_b75d8.dir/objects.a -Wl,--no-whole-archive -o cmTC_b75d8.exe -Wl,--out-implib,libcmTC_b75d8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b75d8.dir\\linkLibs.rsp
+        
+      exitCode: 0
+...

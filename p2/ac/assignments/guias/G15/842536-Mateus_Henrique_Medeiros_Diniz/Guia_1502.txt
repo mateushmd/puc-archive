@@ -1,0 +1,49 @@
+// Guia_1502.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+main:	LXI H,0050H
+		MOV D,M
+		INX H
+		MOV E,M
+		
+		INX H
+		MOV A,M
+		ADD D
+		MOV D,A
+		INX H
+		MOV A,M
+		ADC E
+		MOV E,M
+	
+		INX H
+		MOV A,M	
+		ADD D
+		MOV D,A
+		INX H
+		MOV A,M
+		ADC E
+		MOV E,M
+	
+		INX H
+		MOV A,M
+		CMA	
+		ADI 1H
+		MOV B,A
+		INX H
+		MOV A,M
+		CMA
+		ACI 0H
+		MOV C,A
+		MOV A,D
+		ADD B
+		MOV D,A
+		MOV A,E
+		ADC C
+		MOV E,A
+		
+		INX H
+		MOV M,D
+		INX H
+		MOV M,E
+		HLT
+

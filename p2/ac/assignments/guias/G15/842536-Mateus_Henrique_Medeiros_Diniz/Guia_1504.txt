@@ -1,0 +1,22 @@
+// Guia_1504.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+main:	LXI H,0050H
+		PUSH H
+		
+		INX H
+		MOV A,M
+		ADD A
+		MOV B,A
+		
+		XCHG
+		XTHL
+		MOV A,M
+		SUB B
+		ADD A
+		
+		XCHG
+		INX H
+		MOV M,A
+	
+		HLT

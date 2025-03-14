@@ -1,0 +1,30 @@
+// Guia_1601.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+JMP MAIN
+F_MUL: 		POP H
+			POP B
+			MOV A, C
+			MOV D, A
+			MVI A, 00
+			MOV C, A
+			MVI A, 00
+			MOV E, A
+			
+MUL_LOOP: 	ADD C
+			JNC SKIP
+			INR E
+			
+SKIP: 		DCR D
+			JNZ MUL_LOOP
+			PUSH H
+			RET
+
+MAIN: 		LXI H, 0050
+			MOV C, M
+			INX H
+			MOV D, M
+			PUSH B
+			CALL F_MUL
+			SHLD 0052
+			HLT

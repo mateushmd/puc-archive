@@ -1,0 +1,1 @@
+Para as questões 4 e 5, como apenas os três primeiros Flip-Flops foram especificados, desconsiderei os T4 e T5.

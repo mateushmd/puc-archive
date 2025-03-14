@@ -1,0 +1,58 @@
+Main:	load false
+	store b
+	load false
+	store a
+	NAND b
+	store n_ab
+	NAND a
+	store n_a_ab 
+	load b
+	NAND n_ab
+	NAND n_a_ab
+	write
+
+	load true
+	store b
+	load false
+	store a
+	NAND b
+	store n_ab
+	NAND a
+	store n_a_ab 
+	load b
+	NAND n_ab
+	NAND n_a_ab
+	write
+
+	load false
+	store b
+	load true
+	store a
+	NAND b
+	store n_ab
+	NAND a
+	store n_a_ab 
+	load b
+	NAND n_ab
+	NAND n_a_ab
+	write
+
+	load true
+	store a
+	load true
+	store b
+	NAND b
+	store n_ab
+	NAND a
+	store n_a_ab 
+	load b
+	NAND n_ab
+	NAND n_a_ab
+	write
+
+false: 	.data 2 0
+true:	.data 2 0xFFFF
+a: 	.data 2 0
+b: 	.data 2 0
+n_ab:	.data 2 0
+n_a_ab: .data 2 0

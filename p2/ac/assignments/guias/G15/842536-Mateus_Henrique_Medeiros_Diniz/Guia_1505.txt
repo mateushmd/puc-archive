@@ -1,0 +1,23 @@
+// Guia_1505.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+main:	LXI H,0050H
+		MOV A,M
+		RLC
+		ANI FEH
+		RLC
+		ANI FEH
+		RLC
+		ANI FEH
+		MOV B,A
+		
+		INX H
+		MOV A,M
+		RRC
+		ANI 7FH
+		ADD B
+		
+		INX H
+		MOV M,A
+	
+		HLT

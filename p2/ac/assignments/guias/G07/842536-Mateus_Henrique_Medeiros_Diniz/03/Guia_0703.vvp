@@ -1,0 +1,143 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\ICARUS~1\lib\ivl\system.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\ICARUS~1\lib\ivl\va_math.vpi";
+S_00000229ad304c10 .scope module, "Guia_0703" "Guia_0703" 2 6;
+ .timescale 0 0;
+v00000229ad3132c0_0 .net "r", 0 0, L_00000229ad426e20;  1 drivers
+v00000229ad313c20_0 .net "s", 0 0, L_00000229ad4269e0;  1 drivers
+v00000229ad313400_0 .var "select1", 0 0;
+v00000229ad313cc0_0 .var "select2", 0 0;
+v00000229ad3137c0_0 .net "t", 0 0, L_00000229ad364710;  1 drivers
+v00000229ad3135e0_0 .net "u", 0 0, L_00000229ad364630;  1 drivers
+v00000229ad313220_0 .net "v", 0 0, L_00000229ad364160;  1 drivers
+v00000229ad313e00_0 .var "x", 0 0;
+v00000229ad313ea0_0 .var "y", 0 0;
+S_00000229ad3060f0 .scope module, "f" "f0703" 2 10, 2 44 0, S_00000229ad304c10;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "r";
+    .port_info 1 /OUTPUT 1 "s";
+    .port_info 2 /OUTPUT 1 "t";
+    .port_info 3 /OUTPUT 1 "u";
+    .port_info 4 /INPUT 1 "a";
+    .port_info 5 /INPUT 1 "b";
+L_00000229ad426e20 .functor AND 1, v00000229ad313e00_0, v00000229ad313ea0_0, C4<1>, C4<1>;
+L_00000229ad4269e0 .functor NAND 1, v00000229ad313e00_0, v00000229ad313ea0_0, C4<1>, C4<1>;
+L_00000229ad364710 .functor OR 1, v00000229ad313e00_0, v00000229ad313ea0_0, C4<0>, C4<0>;
+L_00000229ad364630 .functor NOR 1, v00000229ad313e00_0, v00000229ad313ea0_0, C4<0>, C4<0>;
+v00000229ad426860_0 .net "a", 0 0, v00000229ad313e00_0;  1 drivers
+v00000229ad426b40_0 .net "b", 0 0, v00000229ad313ea0_0;  1 drivers
+v00000229ad306280_0 .net "r", 0 0, L_00000229ad426e20;  alias, 1 drivers
+v00000229ad306320_0 .net "s", 0 0, L_00000229ad4269e0;  alias, 1 drivers
+v00000229ad3063c0_0 .net "t", 0 0, L_00000229ad364710;  alias, 1 drivers
+v00000229ad42d670_0 .net "u", 0 0, L_00000229ad364630;  alias, 1 drivers
+S_00000229ad42d710 .scope module, "m" "mux" 2 12, 2 52 0, S_00000229ad304c10;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "c";
+    .port_info 4 /INPUT 1 "d";
+    .port_info 5 /INPUT 1 "select1";
+    .port_info 6 /INPUT 1 "select2";
+L_00000229ad364240 .functor NOT 1, v00000229ad313400_0, C4<0>, C4<0>, C4<0>;
+L_00000229ad3646a0 .functor NOT 1, v00000229ad313cc0_0, C4<0>, C4<0>, C4<0>;
+L_00000229ad364400 .functor AND 1, L_00000229ad426e20, L_00000229ad364240, L_00000229ad3646a0, C4<1>;
+L_00000229ad364780 .functor AND 1, L_00000229ad4269e0, L_00000229ad364240, v00000229ad313cc0_0, C4<1>;
+L_00000229ad364080 .functor AND 1, L_00000229ad364710, v00000229ad313400_0, L_00000229ad3646a0, C4<1>;
+L_00000229ad3640f0 .functor AND 1, L_00000229ad364630, v00000229ad313400_0, v00000229ad313cc0_0, C4<1>;
+L_00000229ad364160 .functor OR 1, L_00000229ad364400, L_00000229ad364780, L_00000229ad364080, L_00000229ad3640f0;
+v00000229ad313360_0 .net "a", 0 0, L_00000229ad426e20;  alias, 1 drivers
+v00000229ad313a40_0 .net "b", 0 0, L_00000229ad4269e0;  alias, 1 drivers
+v00000229ad313fe0_0 .net "c", 0 0, L_00000229ad364710;  alias, 1 drivers
+v00000229ad313860_0 .net "d", 0 0, L_00000229ad364630;  alias, 1 drivers
+v00000229ad313d60_0 .net "not_select1", 0 0, L_00000229ad364240;  1 drivers
+v00000229ad3134a0_0 .net "not_select2", 0 0, L_00000229ad3646a0;  1 drivers
+v00000229ad313540_0 .net "s", 0 0, L_00000229ad364160;  alias, 1 drivers
+v00000229ad3139a0_0 .net "sa", 0 0, L_00000229ad364400;  1 drivers
+v00000229ad3130e0_0 .net "sb", 0 0, L_00000229ad364780;  1 drivers
+v00000229ad313ae0_0 .net "sc", 0 0, L_00000229ad364080;  1 drivers
+v00000229ad313720_0 .net "sd", 0 0, L_00000229ad3640f0;  1 drivers
+v00000229ad313b80_0 .net "select1", 0 0, v00000229ad313400_0;  1 drivers
+v00000229ad313900_0 .net "select2", 0 0, v00000229ad313cc0_0;  1 drivers
+S_00000229ad42d8a0 .scope begin, "main" "main" 2 15, 2 15 0, S_00000229ad304c10;
+ .timescale 0 0;
+v00000229ad313680_0 .var/i "i", 31 0;
+    .scope S_00000229ad304c10;
+T_0 ;
+    %fork t_1, S_00000229ad42d8a0;
+    %jmp t_0;
+    .scope S_00000229ad42d8a0;
+t_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000229ad313e00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000229ad313ea0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000229ad313400_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000229ad313cc0_0, 0, 1;
+    %vpi_call 2 23 "$display", "select1 select2 x y | v" {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000229ad313680_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v00000229ad313680_0;
+    %cmpi/s 16, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %delay 1, 0;
+    %vpi_call 2 28 "$display", "   %b       %b    %b %b | %b", v00000229ad313400_0, v00000229ad313cc0_0, v00000229ad313e00_0, v00000229ad313ea0_0, v00000229ad313220_0 {0 0 0};
+    %load/vec4 v00000229ad313ea0_0;
+    %inv;
+    %store/vec4 v00000229ad313ea0_0, 0, 1;
+    %load/vec4 v00000229ad313680_0;
+    %addi 1, 0, 32;
+    %pushi/vec4 2, 0, 32;
+    %mod/s;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.2, 4;
+    %load/vec4 v00000229ad313e00_0;
+    %inv;
+    %store/vec4 v00000229ad313e00_0, 0, 1;
+T_0.2 ;
+    %load/vec4 v00000229ad313680_0;
+    %addi 1, 0, 32;
+    %pushi/vec4 8, 0, 32;
+    %mod/s;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.4, 4;
+    %load/vec4 v00000229ad313400_0;
+    %inv;
+    %store/vec4 v00000229ad313400_0, 0, 1;
+T_0.4 ;
+    %load/vec4 v00000229ad313680_0;
+    %addi 1, 0, 32;
+    %pushi/vec4 4, 0, 32;
+    %mod/s;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.6, 4;
+    %load/vec4 v00000229ad313cc0_0;
+    %inv;
+    %store/vec4 v00000229ad313cc0_0, 0, 1;
+T_0.6 ;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v00000229ad313680_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v00000229ad313680_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .scope S_00000229ad304c10;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Guia_0703.v";

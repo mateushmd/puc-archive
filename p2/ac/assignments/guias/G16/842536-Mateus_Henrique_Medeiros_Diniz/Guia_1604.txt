@@ -1,0 +1,27 @@
+// Guia_1604.txt
+// 842536 - Mateus Henrique Medeiros Diniz
+
+			JMP MAIN
+F_MAX: 		POP H
+			POP B
+			MOV A, C
+			MOV D, B
+			
+MAX_LOOP: 	INX H
+			MOV C, M
+			CMP A
+			JC SKIP
+			MOV A, C
+			
+SKIP: 		DCR D
+			JNZ MAX_LOOP
+			PUSH H
+			RET
+
+MAIN: 		LXI H, 0050
+			MVI B, 05
+			MOV C, B
+			PUSH B
+			CALL F_MAX
+			STA 0055
+			HLT

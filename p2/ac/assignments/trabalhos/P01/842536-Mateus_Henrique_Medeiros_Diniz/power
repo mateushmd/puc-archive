@@ -1,0 +1,29 @@
+Main:		load zero
+		store square
+		load N    
+		store count
+		
+loop:		load count
+		jmpz end_loop
+		load square
+		add odd_number
+		store square
+		load count
+		subtract one
+		store count
+		load odd_number
+		add two
+		store odd_number
+		jump loop
+
+end_loop:	load square
+		write
+		stop
+
+zero:		.data 2 0
+one:		.data 2 1
+two:		.data 2 2
+N:		.data 2 5
+square:		.data 2 0
+count:		.data 2 0
+odd_number:	.data 2 1

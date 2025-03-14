@@ -1,0 +1,31 @@
+Main:	load f1
+	write	
+
+	load f2
+	write
+
+	load f1
+	add f2
+	store t
+	write
+
+	load f2
+	add t
+	store t2
+	write
+
+	load t
+	add t2
+	store t3
+	write
+
+	load t2
+	add t3
+	write
+	stop	
+
+f1:	.data 2 0
+f2:	.data 2 1
+t:	.data 2 0
+t2:	.data 2 0
+t3:	.data 2 0

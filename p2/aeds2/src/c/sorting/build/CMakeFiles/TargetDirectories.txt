@@ -1,0 +1,3 @@
+C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/main.dir
+C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/edit_cache.dir
+C:/temp/estudos/puc/p2/aeds2/src/c/sorting/build/CMakeFiles/rebuild_cache.dir
